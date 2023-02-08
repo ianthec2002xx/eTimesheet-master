@@ -17,7 +17,7 @@ namespace AspNetCore.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Project>>> Get()
+    public async Task<ActionResult<List<Project><Coordinator>>> Get()
     {
       return await _dbContext.Projects.ToListAsync();
     }
@@ -35,11 +35,11 @@ namespace AspNetCore.Controllers
     //   return await _dbContext.Coordinators.ToListAsync();
     // }
 
-    // GET api/foodrecords/5
-    [HttpGet("coordinators/{id2}")]
-    public async Task<ActionResult<Coordinator>> Get(int id2)
-    {
-      return await _dbContext.Coordinators.FindAsync(id2);
-    }
+    // // GET api/foodrecords/5
+    // [HttpGet("coordinators/{id}")]
+    // public async Task<ActionResult<Coordinator>> Get(int id)
+    // {
+    //   return await _dbContext.Coordinators.FindAsync(id);
+    // }
   }
 }
