@@ -17,14 +17,14 @@ namespace AspNetCore.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Project>>> Get()
+    public async Task<ActionResult<List<Project>>> Getprojects()
     {
       return await _dbContext.Projects.ToListAsync();
     }
 
     // GET api/foodrecords/5
     [HttpGet("projects/{id}")]
-    public async Task<ActionResult<Project>> Get(int id)
+    public async Task<ActionResult<Project>> Getprojects(int id)
     {
       return await _dbContext.Projects.FindAsync(id);
     }
