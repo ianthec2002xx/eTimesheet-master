@@ -17,7 +17,7 @@ namespace AspNetCore.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<Project><Coordinator>>> Get()
+    public async Task<ActionResult<List<Project>>> Get()
     {
       return await _dbContext.Projects.ToListAsync();
     }
