@@ -7,7 +7,7 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>Id</th>
+                <!-- <th>Id</th> -->
                 <th>Project</th>
                 <th>Duration</th>
                 <th>&nbsp;</th>
@@ -15,7 +15,7 @@
             </thead>
             <tbody>
               <tr v-for="project in projects" :key="project.id">
-                <td>{{ project.id }}</td>
+                <!-- <td>{{ project.id }}</td> -->
                 <td>{{ project.name }}</td>
                 <td>{{ project.duration }}</td>
                 <td>
@@ -37,7 +37,12 @@
                 <b-form-input type="text" v-model="model.name"></b-form-input>
               </b-form-group>
               <b-form-group label="Duration">
-                <b-form-input type="text" v-model="model.start"></b-form-input>
+                <b-form-input type="text" v-model="model.duration"></b-form-input>
+              </b-form-group>
+              <b-form-group label="Project Coordinator">
+                <b-form-select placeholder="Select Project Coordinator" v-model="model.coordinator">              
+                  <option></option>
+                </b-form-select>
               </b-form-group>
               <div>
                 <b-btn type="submit" variant="success">Save Record</b-btn>
