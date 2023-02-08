@@ -29,18 +29,18 @@ namespace AspNetCore.Controllers
     {
       return await _dbContext.Projects.FindAsync(id);
     }
-  [HttpGet]
-    public async Task<ActionResult<List<Coordinator>>> Get()
-    {
-      return await _dbContext.Coordinators.ToListAsync();
-    }
+  // [HttpGet]
+  //   public async Task<ActionResult<List<Coordinator>>> Get()
+  //   {
+  //     return await _dbContext.Coordinators.ToListAsync();
+  //   }
 
-    // GET api/foodrecords/5
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Coordinator>> Get(int id)
-    {
-      return await _dbContext.Coordinators.FindAsync(id);
-    }
+  //   // GET api/foodrecords/5
+  //   [HttpGet("{id}")]
+  //   public async Task<ActionResult<Coordinator>> Get(int id)
+  //   {
+  //     return await _dbContext.Coordinators.FindAsync(id);
+  //   }
     // POST api/foodrecords
     [HttpPost]
     public async Task Post(Project model)
